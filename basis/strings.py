@@ -1,6 +1,6 @@
 # %%
-doubleQuotes = "double quotes"
-simpleQuotes = 'simple quotes'
+print("double quotes")
+print('simple quotes')
 
 # %%
 'a' + 'b'
@@ -12,11 +12,12 @@ simpleQuotes = 'simple quotes'
 'a' - 'b'
 
 # %%
-'It\'s an escaped quote!'
-"I'm a so-called \"script kiddie\""
+print('It\'s an escaped quote!')
+print("I'm a so-called \"script kiddie\"")
 
 # %%
-"""This is line 1,
+print("""This is line 1,
 ... this is line 2,
 ... this is line 3."""
-'This is line 1,\nthis is line 2,\nthis is line 3.'
+'This is line 1,\nthis is line 2,\nthis is line 3.')
+# %%
