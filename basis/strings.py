@@ -21,3 +21,30 @@ print("""This is line 1,
 ... this is line 3."""
 'This is line 1,\nthis is line 2,\nthis is line 3.')
 # %%
+price = 59
+txt = f"The price is {price} dollars"
+print(txt)
+
+txt = f"The price is {price:.2f} dollars"
+print(txt)
+
+txt = f"The price is {20 * 59} dollars"
+print(txt)
+
+price = 59
+tax = 0.25
+txt = f"The price is {price + (price * tax)} dollars"
+print(txt)
+
+price = 49
+txt = f"It is very {'Expensive' if price>50 else 'Cheap'}"
+
+print(txt)
+
+def myconverter(x):
+  return x * 0.3048
+
+txt = f"The plane is flying at a {myconverter(30000)} meter altitude"
+print(txt)
+
+# %%
