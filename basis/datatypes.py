@@ -135,3 +135,22 @@ fruits = ("apple", "banana", "cherry")
 mytuple = fruits * 2
 
 print(mytuple)
+# %%
+# Return the number of times the value appears in the tuple
+thistuple = (1, 3, 7, 8, "Anderson", "Anderson", "anderson", 6, 8, 5)
+
+print(thistuple.count("Anderson"))
+print(thistuple.index("Anderson")) # find the first occurrence of the specified value.
+print(thistuple.index("not")) # raise an exception if the value is not found.
+
+# %%
+# updat tuple
+# Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called.
+# But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+# %%
