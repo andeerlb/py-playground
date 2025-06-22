@@ -153,4 +153,182 @@ y[1] = "kiwi"
 x = tuple(y)
 
 print(x)
+
+# %%
+# set is a collection which is unordered, unchangeable, and unindexed
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+
+# %%
+# duplicates values will be ignored
+thisset = {"apple", "banana", "cherry", "apple"}
+
+print(thisset, len(thisset), type(thisset))
+
+thisset = set(("apple", "banana", "cherry")) # note the double round-brackets
+print(thisset)
+
+# %%
+# dictionaries are used to store data in key:value
+# A dictionary is a collection which is ordered, changeable and do not allow duplicates.
+# As of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
+# When we say that dictionaries are ordered, it means that the items have a defined order, and that order will not change.
+# Unordered means that the items do not have a defined order, you cannot refer to an item by using an index.
+
+cardict = {
+  "brand": "Byd",
+  "model": "Song Plus",
+  "year": 2025
+}
+
+print(cardict)
+print(cardict["brand"])
+print(len(cardict))
+print(type(cardict))
+
+# %%
+# use dict constructor
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+print(thisdict.get("name"), ";", thisdict["name"])
+print(thisdict.keys())
+# %%
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.keys()
+
+print(x) #before the change
+
+car["color"] = "white"
+
+print(x) #after the change
+print(car)
+
+# %%
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+thisdict.update({"year": 2020})
+print(thisdict)
+thisdict.update([('year', 3), ('model', 4), ('brand', 5)])
+print(thisdict)
+thisdict.update([('b', 3), ('c', 4), ('d', 5)])
+print(thisdict)
+# %%
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+thisdict.pop("model")
+print(thisdict)
+thisdict.popitem()
+print(thisdict)
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+del thisdict["brand"] # removes the last inserted item (in versions before 3.7, a random item is removed instead)
+print(thisdict)
+del thisdict # delete the dictionary completely
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+thisdict.clear()
+print(thisdict)
+# %%
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+for x in thisdict:
+   print(x, thisdict[x])
+
+print() 
+
+for x in thisdict.values():
+   print(x)
+
+print()
+
+for x in thisdict.keys():
+  print(x)
+
+print()
+
+for key, value in thisdict.items():
+   print(key, value)
+
+# %%
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+
+mydict = dict(thisdict)
+print(mydict)
+# %%
+nesteddict = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+
+print(nesteddict)
+print(len(nesteddict), type(nesteddict))
+print(nesteddict["child3"]["name"])
+
+# %%
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+print(myfamily)
+print(len(myfamily), type(myfamily))
+print(myfamily["child2"]["name"])
 # %%
