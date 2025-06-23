@@ -6,7 +6,8 @@ A best practice among Python developers is to use a project-specific virtual env
 
 Open the Command Palette `(Ctrl+Shift+P)`, start typing the Python: Create Environment command to search, and then select the command.
 
-Ensure your new environment is selected by using the Python: Select Interpreter command from the Command Palette.
+Ensure your new environment is selected by using the Python: Select Interpreter command from the Command Palette.  
+Or use this command to active the venv `source venv/bin/activate` and this to stop `deactivate`
 
 ## Set Type Checking Level in VSCode GUI 
 
