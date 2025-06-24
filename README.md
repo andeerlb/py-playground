@@ -22,3 +22,6 @@ Or use this command to active the venv `source venv/bin/activate` and this to st
 * `python manage.py sqlmigrate polls 0001`
 * `python manage.py migrate`
 * `python manage.py shell`
+
+# Creating an admin user
+`python manage.py createsuperuser`
