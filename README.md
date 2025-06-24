@@ -15,3 +15,10 @@ Or use this command to active the venv `source venv/bin/activate` and this to st
   * Recommended — Pylance (includes Pyright) - Pylance is Microsoft's extension for Python that uses Pyright under the hood for type checking.
 * Option 2: Install Pyright directly
   * You can install both, but Pylance is better integrated with the Python extension.
+
+## By running makemigrations
+
+* `python manage.py makemigrations polls`
+* `python manage.py sqlmigrate polls 0001`
+* `python manage.py migrate`
+* `python manage.py shell`
