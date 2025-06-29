@@ -1,7 +1,5 @@
 {
-  "typeCheckingMode": "strict",
   "reportMissingImports": true,
-  "reportGeneralTypeIssues": true,
-  "reportInvalidTypeVarUse": true,
-  "exclude": ["**/__pycache__"]
+  "exclude": ["**/__pycache__"],
+  "typeCheckingMode": "strict"
 }
