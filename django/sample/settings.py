@@ -30,6 +30,10 @@ ALLOWED_HOSTS: List[str] = []
 
 
 # Application definition
+import sys
+import os
+
+TESTING = "test" in sys.argv or "PYTEST_VERSION" in os.environ
 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
@@ -52,6 +56,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+if not TESTING:
+    INSTALLED_APPS = [
+        *INSTALLED_APPS,
+        "debug_toolbar",
+    ]
+    MIDDLEWARE = [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
+        *MIDDLEWARE,
+    ]
 
 INTERNAL_IPS = [
     "127.0.0.1",
