@@ -1,5 +1,0 @@
-{
-  "reportMissingImports": true,
-  "exclude": ["**/__pycache__"],
-  "typeCheckingMode": "strict"
-}
