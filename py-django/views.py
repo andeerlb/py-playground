@@ -50,3 +50,17 @@ def current_datetime(request):
     now = datetime.datetime.now()
     html = '<html lang="en"><body>It is now %s.</body></html>' % now
     return HttpResponse(html)
+
+# %%
+# view decorators
+# The decorators in django.views.decorators.http 
+# can be used to restrict access to views based on the request method. These decorators will return a 
+# django.http.HttpResponseNotAllowed if the conditions are not met.
+# we have the decortos for: require_GET, require_POST, require_safe
+from django.views.decorators.http import require_http_methods
+
+@require_http_methods(["GET", "POST"])
+def my_view(request):
+    # I can assume now that only GET or POST requests make it this far
+    # ...
+    pass
